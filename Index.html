@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- head -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- title -->
+    <title>Visualizer</title>
+
+    <!-- linking style.css -->
+    <link href="style.css" rel="stylesheet" />
+  </head>
+
+  <!-- body -->
+  <body>
+    <section class="head">Swap Visualize</section>
+    <div id="main">
+      <div id="number">
+        <span id="f" style="background-color: #8a0ffc;">50</span>
+        <span id="s" style="background-color: #f7053e;"> 80</span>
+      </div>
+      <button onclick="swap()">Swap</button>
+    </div>
+  </body>
+
+  <!-- linking index.js -->
+  <script>
+    function swap() {
+      var x = document.getElementById("f");
+      var y = document.getElementById("s");
+      var z = y.innerHTML;
+      var zc = y.style.backgroundColor;
+      x.className = "la";
+      y.className = "ra";
+      setTimeout(function () {
+        y.style.backgroundColor = x.style.backgroundColor;
+        x.style.backgroundColor = zc;
+        y.innerHTML = x.innerHTML;
+        x.innerHTML = z;
+        x.className = "";
+        y.className = "";
+      }, 4000);
+    }
+  </script>
+</html>
