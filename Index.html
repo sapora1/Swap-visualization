@@ -28,9 +28,9 @@
     </div>
   </body>
 
-  <!-- linking index.js -->
-  <script>
+<script>
     function swap() {
+      document.getElementById("btn").disabled = true;
       var x = document.getElementById("f");
       var y = document.getElementById("s");
       var z = y.innerHTML;
@@ -49,9 +49,11 @@
       var temp = setInterval(function () {
         document.getElementById("btn").innerHTML = "Wait..." + c;
         c--;
+
         if (c < -1) {
           document.getElementById("btn").innerHTML = "Swap";
           clearInterval(temp);
+          document.getElementById("btn").disabled = false;
         }
       }, 1000);
     }
