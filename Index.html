@@ -21,7 +21,7 @@
         <span id="f" style="background-color: #8a0ffc;">50</span>
         <span id="s" style="background-color: #f7053e;"> 80</span>
       </div>
-      <button onclick="swap()">Swap</button>
+      <button id="btn" onclick="swap()">Swap</button>
     </div>
     <div style="margin-top: 48vh; font-size: 30px; float: right; color: black;">
       Created by: Sapora
@@ -45,6 +45,15 @@
         x.className = "";
         y.className = "";
       }, 4000);
+      var c = 3;
+      var temp = setInterval(function () {
+        document.getElementById("btn").innerHTML = "Swapping..." + c;
+        c--;
+        if (c < -1) {
+          document.getElementById("btn").innerHTML = "Swap";
+          clearInterval(temp);
+        }
+      }, 1000);
     }
   </script>
 </html>
