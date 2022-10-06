@@ -1,0 +1,96 @@
+#main {
+  text-align: center;
+  margin: auto;
+  margin-top: 25vh;
+  display: flexbox;
+}
+body {
+  background-image: linear-gradient(to right, #8a0ffc, #f7053e);
+  /* display: flex; */
+}
+#f {
+  font-size: 100px;
+  background-color: #8a0ffc;
+  /* border: 5px solid; */
+  border-radius: 30px;
+  /* color: white; */
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+  margin: 10px;
+  padding: 10px;
+}
+#s {
+  font-size: 100px;
+  background-color: #f7053e;
+  /* border: 5px solid red; */
+  border-radius: 30px;
+  /* color: white; */
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+  margin: 10px;
+  padding: 10px;
+}
+.head {
+  font-size: 50px;
+  margin: 30px 0px 20px 0px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+button {
+  margin: 30px;
+  padding: 20px 30vw 20px 30vw;
+  border-radius: 30px;
+  font-size: 30px;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
+  border: none;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.la {
+  animation-name: left;
+  animation-duration: 4s;
+  position: relative;
+}
+.ra {
+  animation-name: right;
+  animation-duration: 4s;
+  position: relative;
+}
+
+@keyframes left {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    left: 0px;
+    top: -150px;
+  }
+  50% {
+    left: 150px;
+    top: -150px;
+  }
+  75% {
+    left: 150px;
+    top: -150px;
+  }
+  100% {
+    left: 150px;
+    top: 0px;
+  }
+}
+
+@keyframes right {
+  0% {
+    left: 0px;
+  }
+  25% {
+    left: 0px;
+  }
+  50% {
+    left: -150px;
+  }
+  75% {
+    left: -150px;
+  }
+  100% {
+    left: -150px;
+  }
+}
